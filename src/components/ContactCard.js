@@ -6,14 +6,19 @@ const ContactCard = (props) => {
 
   return (
     <div className="item">
-      <img className="ui avatar image" src={user} alt="user" />
-      <div className="content">
+      <img
+        className="ui avatar image"
+        src={user}
+        alt="user"
+        style={{ marginBlock: "6px" }}
+      />
+      <div className="content" style={{ marginBlock: "6px" }}>
         <div className="header">{name}</div>
         <div>{email}</div>
       </div>
       <i
         className="right floated trash alternate outline icon"
-        style={{ color: "red", marginTop: "6px" }}
+        style={{ color: "red", marginTop: "14px" }}
       ></i>
     </div>
   );
