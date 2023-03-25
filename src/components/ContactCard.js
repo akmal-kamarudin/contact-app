@@ -7,7 +7,7 @@ const ContactCard = (props) => {
   return (
     <div className="item">
       <img
-        className="ui avatar image"
+        className="ui mini avatar image"
         src={user}
         alt="user"
         style={{ marginBlock: "6px" }}
@@ -17,8 +17,9 @@ const ContactCard = (props) => {
         <div>{email}</div>
       </div>
       <i
-        className="right floated trash alternate outline icon"
-        style={{ color: "red", marginTop: "14px" }}
+        className="large right floated trash alternate outline icon"
+        style={{ color: "red", marginTop: "12px", cursor: "pointer" }}
+        onClick={() => props.clickHandler(id)}
       ></i>
     </div>
   );
