@@ -12,8 +12,8 @@ function App() {
   );
 
   const addContactHandler = (contact) => {
-    console.log(contact);
     setContacts([...contacts, { id: uuid(), ...contact }]);
+    console.log(contact);
   };
 
   const removeContactHandler = (id) => {
