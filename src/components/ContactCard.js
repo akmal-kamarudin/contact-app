@@ -1,5 +1,6 @@
 import React from "react";
-import user from "../images/user.jpg";
+import { Link } from "react-router-dom";
+import user from "../images/user.png";
 
 const ContactCard = (props) => {
   const { id, name, email } = props.contact;
@@ -13,8 +14,12 @@ const ContactCard = (props) => {
         style={{ marginBlock: "6px" }}
       />
       <div className="content" style={{ marginBlock: "6px" }}>
-        <div className="header">{name}</div>
-        <div>{email}</div>
+        <Link
+          to={{ pathname: `/contact/${id}`, state: { contact: props.contact } }}
+        >
+          <div className="header">{name}</div>
+          <div>{email}</div>
+        </Link>
       </div>
       <i
         className="large right floated trash alternate outline icon"
