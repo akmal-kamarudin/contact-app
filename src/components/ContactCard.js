@@ -21,11 +21,14 @@ const ContactCard = (props) => {
           <div>{email}</div>
         </Link>
       </div>
-      <i
-        className="large right floated trash alternate outline icon"
-        style={{ color: "red", marginTop: "12px", cursor: "pointer" }}
-        onClick={() => props.clickHandler(id)}
-      ></i>
+      <Link
+        to={{ pathname: `/delete/${id}`, state: { contact: props.contact } }}
+      >
+        <i
+          className="large right floated trash alternate outline icon"
+          style={{ color: "red", marginTop: "12px", cursor: "pointer" }}
+        ></i>
+      </Link>
     </div>
   );
 };
