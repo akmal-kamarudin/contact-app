@@ -39,13 +39,7 @@ function App() {
             <Route
               path="/"
               exact
-              render={(props) => (
-                <ContactList
-                  {...props}
-                  contacts={contacts}
-                  // getContactId={removeContactHandler}
-                />
-              )}
+              render={(props) => <ContactList {...props} contacts={contacts} />}
             />
             <Route
               path="/add"
@@ -57,11 +51,7 @@ function App() {
             <Route
               path="/delete/:id"
               render={(props) => (
-                <ContactDelete
-                  {...props}
-                  // contacts={contacts}
-                  getContactId={removeContactHandler}
-                />
+                <ContactDelete {...props} getContactId={removeContactHandler} />
               )}
             />
           </Switch>
